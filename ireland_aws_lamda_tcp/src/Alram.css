@@ -1,0 +1,153 @@
+.box {
+  grid-column: span ;
+  width: 71rem;
+  height: 24rem;
+  border-radius: 1rem;
+  /* box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white); */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.alram_blank{
+  height: 4rem;
+  border-radius: 1rem;
+  /* box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toggle {
+  width: 20.4rem;
+  height: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.toggle input {
+  display: none;
+}
+.toggle > input:checked + label {
+  transition: all 0.5s ease;
+  color: var(--primary);
+}
+.toggle__1, .toggle__2, .toggle__3 {
+  width: 6.8rem;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--greyDark);
+  transition: all 0.5s ease;
+}
+.toggle__1:hover, .toggle__2:hover, .toggle__3:hover {
+  color: var(--primary);
+}
+.toggle__color {
+  position: absolute;
+  height: 3.4rem;
+  width: 6.2rem;
+  margin-left: 0.3rem;
+  border-radius: 0.8rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+  pointer-events: none;
+}
+
+#tab-1:checked ~ .toggle__color {
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#tab-2:checked ~ .toggle__color {
+  transform: translateX(6.8rem);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#tab-3:checked ~ .toggle__color {
+  transform: translateX(13.6rem);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.set_btn {
+  width: 7rem;
+  height: 4rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--greyDark);
+}
+
+.set_btn:hover {
+  color: var(--primary);
+}
+.set_btn:active {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.set_btn p {
+  font-size: 1.6rem;
+}
+
+
+.alram_blank2{
+  height: 14rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--greyDark);
+}
+
+
+
+.time_blank{
+  height: 6.5rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#input_start_hour,#input_start_minute,#input_end_hour,#input_end_minute{
+  width: 20.4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  padding-left: 1.4rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+  background: none;
+  font-family: inherit;
+  text-align: center;
+}
+#input_start_hour::-moz-placeholder,#input_start_minute::-moz-placeholder ,#input_end_hour::-moz-placeholder ,#input_end_minute::-moz-placeholder  {
+  color: var(--greyLight-3);
+}
+#input_start_hour:-ms-input-placeholder,#input_start_minute:-ms-input-placeholder,#input_end_hour:-ms-input-placeholder,#input_end_minute:-ms-input-placeholder {
+  color: var(--greyLight-3);
+}
+#input_start_hour::placeholder, #input_start_minute::placeholder , #input_end_hour::placeholder , #input_end_minute::placeholder  {
+  color: var(--greyLight-3);
+}
+#input_start_hour:focus ,#input_start_minute:focus ,#input_end_hour:focus ,#input_end_minute:focus {
+  outline: none;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.time_title{
+  font-size: 1.6rem;
+} 
